@@ -1036,6 +1036,9 @@ span.freeshipping {
     .hp-full-banner-text h2 {
         font-size: 42px;
     }
+	.home-category-header > .container{
+		overflow-x:hidden;
+	}
 }
 @media(max-width: 767px) {
     .hp-slider-text h3 {

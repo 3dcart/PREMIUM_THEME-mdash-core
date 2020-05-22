@@ -587,6 +587,9 @@ span.freeshipping {
     .footer-social {
         text-align: center;
     }
+	.home-category-header > .container{
+		overflow-x:hidden;
+	}
 }
 @media(max-width: 767px) {
     .logo {
