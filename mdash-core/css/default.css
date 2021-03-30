@@ -10,6 +10,21 @@ body {
   height: 100%;
   flex-direction: column;
 }
+#skip a
+{
+position:absolute;
+left:-10000px;
+top:auto;
+width:1px;
+height:1px;
+overflow:hidden;
+}
+#skip a:focus
+{
+position:static;
+width:auto;
+height:auto;
+}
 .page-content {
   flex: 1 0 auto;
 }
@@ -113,7 +128,7 @@ h1 {
     min-height: 0;
 }
 section.navbar-wrapper {
-    background-color: #000;
+    background-color: #000;color: #fff;
 }
 section.navbar-wrapper.affix {
     position: fixed;
@@ -411,7 +426,7 @@ ul.extrapages li a {
 }
 .mailinglist-submit {
     background-color: #c7b299 !important;
-    color: #fff !important;
+    color: #1A1A1A !important;
     border: none !important;
     float: right;
     width: 78px;
@@ -524,6 +539,7 @@ ul.payment-icons li span:before {
 .product-item del.regular-price {
     text-decoration: line-through;
 }
+.product-item .on-sale-badge{background-color: #8E2538;}
 .sale-price {
     color: #d04b64;
 }
@@ -856,7 +872,7 @@ span.freeshipping {
 .home-page-content .products-section .product-items .product-item {
     margin-bottom: 35px;
 }
-.home-page-content .products-section h2 {
+.home-page-content .products-section h2,.home-page-content .products-section h1 {
     margin: 0;
     font-size: 24px;
     text-transform: uppercase;

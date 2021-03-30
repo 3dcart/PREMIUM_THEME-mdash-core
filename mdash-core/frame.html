@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
     <title>[TITLE]</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2, user-scalable=yes">
     [META]
 
     <!--START: FRAME_RSSFEEDS-->
@@ -25,7 +25,7 @@
 
 </head>
 <body class="[body_class]" data-currency="[currency_symbol]" data-decimal="[decimal_places]">
-
+<div id="skip"><a href="#page-content">Skip to Main Content</a></div>
     <section class="top-nav hidden-xs">
         <div class="container">
             <!--START: FRAME_MENU-->
@@ -48,8 +48,8 @@
         <div class="container">
             <div class="row">
                 <div class="col-xs-3 visible-xs text-left head-mobile-nav">
-                    <a href="#" id="mobile-menu-trigger">
-                        <span class="icon-menu"></span>
+                    <a href="#" id="mobile-menu-trigger" aria-label="menu trigger">
+                        <span role="presentation" class="icon-menu"></span>
                     </a>
                 </div>
 
@@ -63,8 +63,8 @@
                 </div>
 
                 <div class="col-xs-3 text-right visible-xs head-mobile-nav">
-                    <a href="/view_cart.asp">
-                        <span class="icon-basket"></span>
+                    <a href="/view_cart.asp" aria-label="cart link">
+                        <span role="presentation" class="icon-basket"></span>
                     </a>
                 </div>
                 <div class="col-sm-9 useraccount-wrapper">
@@ -72,13 +72,13 @@
                     <div class="useraccount hidden-xs">
                         <ul class="list-inline list-unstyled">
                             <!--START: username-->
-                            <li><i class="icon-user"></i> [account_greeting] [username]</li>
-                            <li><a href="myaccount.asp"><i class="icon-pencil"></i> [frame_myaccount-link-text]</a></li>
-                            <li><a href="logout.asp"><i class="icon-login"></i> [frame_logout-link-text]</a></li>
+                            <li><i role="presentation" class="icon-user"></i> [account_greeting] [username]</li>
+                            <li><a href="myaccount.asp"><i role="presentation" class="icon-pencil"></i> [frame_myaccount-link-text]</a></li>
+                            <li><a href="logout.asp"><i role="presentation" class="icon-login"></i> [frame_logout-link-text]</a></li>
                             <!--END: username-->
                             <!--START: login-->
-                            <li><a href="myaccount.asp"><i class="icon-login"></i> [frame_login-link-text]</a></li>
-                            <li><a href="register.asp"><i class="icon-pencil"></i> [frame_register-link-text]</a></li>
+                            <li><a href="myaccount.asp"><i role="presentation" class="icon-login"></i> [frame_login-link-text]</a></li>
+                            <li><a href="register.asp"><i role="presentation" class="icon-pencil"></i> [frame_register-link-text]</a></li>
                             <!--END: login-->
                         </ul>
                     </div>
@@ -86,13 +86,13 @@
                     <!--START: shopping_cart-->
                     <div class="minicart hidden-xs">
                         <a href="view_cart.asp" class="minicart-inner-top">
-                            <i class="icon-shopping-bag cart-icon"></i> [frame_shopping-cart-text] ([ITEMSINCART])
+                            <i role="presentation" class="icon-shopping-bag cart-icon"></i> [frame_shopping-cart-text] ([ITEMSINCART])
                         </a>
                     </div>
                     <!--END: shopping_cart-->
 					<div id="floating-cart" class="floating-cart">
                         <a href="view_cart.asp" class="minicart-inner clearfix">
-                            <span class="icon-basket cart-icon"></span>
+                            <span role="presentation" class="icon-basket cart-icon"></span>
                             <span class="cart-details">
                                 <span class="minicart-items">[ITEMSINCART]</span> [frame_ITEMSINCART-text]
                             </span>
@@ -104,10 +104,10 @@
                     <!--START: FRAME_SEARCH-->
                     <div class="clearfix">
                         <div id="searchBox" class="searchBox">
-                            <form method="get" name="searchForm" action="search.asp">
+                            <form method="get" name="searchForm" action="search.asp" role="search">
                                 <div class="search-form">
-                                    <input type="text" id="searchlight" name="keyword" value="" placeholder="[frame_search]" class="search-text form-control" />
-                                    <button type="submit" class="search-submit"><span class="icon-search"></span></button>
+                                    <input type="text" id="searchlight" name="keyword" value="" placeholder="[frame_search]" class="search-text form-control" aria-label="search input"/>
+                                    <button type="submit" class="search-submit" aria-label="search button"><span role="presentation" class="icon-search"></span></button>
                                 </div>
                             </form>
                         </div>
@@ -124,9 +124,9 @@
                 <div class="navbar-header">
                     <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
                         <span class="sr-only">Toggle navigation</span>
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
+                        <span role="presentation" class="icon-bar"></span>
+                        <span role="presentation" class="icon-bar"></span>
+                        <span role="presentation" class="icon-bar"></span>
                     </button>
                 </div>
                 <div id="navbar" class="navbar-collapse collapse">
@@ -155,7 +155,7 @@
     </section>
 
     <!--Get current page template-->
-    [page_content]
+    <main id="page-content">[page_content]</main>
     <!--/Get current page template-->
 
     <!-- FOOTER -->
@@ -184,29 +184,29 @@
                         <h3>[frame_social-icons-heading]</h3>
                         <ul class="social-icons list-unstyled list-inline">
                             <!--START: social_link_facebook-->
-                            <li><a href="[social_link_facebook_url]" class="facebook" target="_blank" title="Like Us on Facebook"><span class="icon-facebook"></span></a></li>
-                            <!--END: social_link_facebook-->
-                            <!--START: social_link_twitter-->
-                            <li><a href="[social_link_twitter_url]" class="twitter" target="_blank" title="Follow Us on Twitter"><span class="icon-twitter"></span></a></li>
-                            <!--END: social_link_twitter-->
-                            <!--START: social_link_googleplus-->
-                            <li><a href="[social_link_googleplus_url]" class="gplus" target="_blank" title="Follow Us on Google+"><span class="icon-gplus"></span></a></li>
-                            <!--END: social_link_googleplus-->
-                            <!--START: social_link_youTube-->
-                            <li><a href="[social_link_youTube_url]" class="youtube" target="_blank" title="Subscribe to our Channel"><span class="icon-youtube"></span></a></li>
-                            <!--END: social_link_youTube-->
-                            <!--START: social_link_pinterest-->
-                            <li><a href="[social_link_pinterest_url]" class="pinterest" target="_blank" title="Follow Us on Pinterest"><span class="icon-pinterest"></span></a></li>
-                            <!--END: social_link_pinterest-->
-                            <!--START: social_link_instagram-->
-                            <li><a href="[social_link_instagram_url]" class="instagram" target="_blank" title="Follow Us on Instagram"><span class="icon-instagram"></span></a></li>
-                            <!--END: social_link_instagram-->
-                            <!--START: social_link_tumblr-->
-                            <li><a href="[social_link_tumblr_url]" class="tumblr" target="_blank" title="Follow Us on Tumblr"><span class="icon-tumblr"></span></a></li>
-                            <!--END: social_link_tumblr-->
-                            <!--START: social_link_blog-->
-                            <li><a href="[social_link_blog_url]" class="blog" target="_blank" title="Subscribe to our Blog"><span class="icon-rss"></span></a></li>
-                            <!--END: social_link_blog-->
+                        <li><a href="[social_link_facebook_url]" class="facebook" target="_blank" title="Like Us on Facebook" aria-label="Like Us on Facebook" role="button"><span class="icon-facebook" role="presentation"></span></a></li>
+                        <!--END: social_link_facebook-->
+                        <!--START: social_link_twitter-->
+                        <li><a href="[social_link_twitter_url]" class="twitter" target="_blank" title="Follow Us on Twitter" aria-label="Follow Us on Twitter" role="button"><span class="icon-twitter" role="presentation"></span></a></li>
+                        <!--END: social_link_twitter-->
+                        <!--START: social_link_googleplus-->
+                        <li><a href="[social_link_googleplus_url]" class="gplus" target="_blank" title="Follow Us on Google+" aria-label="Follow Us on Google+" role="button"><span class="icon-gplus" role="presentation"></span></a></li>
+                        <!--END: social_link_googleplus-->
+                        <!--START: social_link_youTube-->
+                        <li><a href="[social_link_youTube_url]" class="youtube" target="_blank" title="Subscribe to our Channel" aria-label="Subscribe to our Channel" role="button"><span class="icon-youtube" role="presentation"></span></a></li>
+                        <!--END: social_link_youTube-->
+                        <!--START: social_link_pinterest-->
+                        <li><a href="[social_link_pinterest_url]" class="pinterest" target="_blank" title="Follow Us on Pinterest" aria-label="Follow Us on Pinterest" role="button"><span class="icon-pinterest"></span></a></li>
+                        <!--END: social_link_pinterest-->
+                        <!--START: social_link_instagram-->
+                        <li><a href="[social_link_instagram_url]" class="instagram" target="_blank" title="Follow Us on Instagram" aria-label="Follow Us on Instagram" role="button"><span class="icon-instagram" role="presentation"></span></a></li>
+                        <!--END: social_link_instagram-->
+                        <!--START: social_link_tumblr-->
+                        <li><a href="[social_link_tumblr_url]" class="tumblr" target="_blank" title="Follow Us on Tumblr" aria-label="Follow Us on Tumblr" role="button"><span class="icon-tumblr" role="presentation"></span></a></li>
+                        <!--END: social_link_tumblr-->
+                        <!--START: social_link_blog-->
+                        <li><a href="[social_link_blog_url]" class="blog" target="_blank" title="Subscribe to our Blog" aria-label="Subscribe to our Blog" role="button"><span class="icon-rss" role="presentation"></span></a></li>
+                        <!--END: social_link_blog-->
                         </ul>
                     </div>
                     <!--END: social_icons-->
@@ -216,9 +216,9 @@
                         <form method="post" name="mailing" action="mailing_list_ajax.asp">
                             <h3>[frame_mailinglist]</h3>
                             <div class="mailinglist-form clearfix">
-                                <input class="mailinglist-input form-control" type="text" name="email" placeholder="[mailinglist_email-field]" autocomplete="off" />
+                                <input class="mailinglist-input form-control" type="text" name="email" placeholder="[mailinglist_email-field]" autocomplete="off" aria-required="true" aria-label="email address" aria-invalid="true"/>
                                 <button class="mailinglist-submit btn btn-default" type="submit" name="www">
-                                    <span id="mailing-btn-txt">[mailinglist_button]</span>
+                                    <span id="mailing-btn-txt" aria-label="mailinglist button">[mailinglist_button]</span>
                                     <span id="mailing-btn-load" class="mailing-btn-load icon-spin2 animate-spin hidden"></span>
                                 </button>
                             </div>
@@ -242,11 +242,11 @@
         <div class="container copyright">
             <p>[frame_copyright1]</p>
             <ul class="payment-icons list-unstyled list-inline">
-                <li><span class="icon-cc-visa"></span></li>
-                <li><span class="icon-cc-paypal"></span></li>
-                <li><span class="icon-cc-mastercard"></span></li>
-                <li><span class="icon-cc-discover"></span></li>
-                <li><span class="icon-cc-amex"></span></li>
+                <li><span role="presentation" class="icon-cc-visa"></span></li>
+                <li><span role="presentation" class="icon-cc-paypal"></span></li>
+                <li><span role="presentation" class="icon-cc-mastercard"></span></li>
+                <li><span role="presentation" class="icon-cc-discover"></span></li>
+                <li><span role="presentation" class="icon-cc-amex"></span></li>
             </ul>
             <!--START: global_footer-->
             <div class="global-footer">[GLOBAL_FOOTER]</div>
